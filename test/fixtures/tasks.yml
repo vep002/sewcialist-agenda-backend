@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  in_progress: false
+  completed: false
+  start_date: 1
+  end_date: 1
+  project: one
+
+two:
+  description: MyString
+  in_progress: false
+  completed: false
+  start_date: 1
+  end_date: 1
+  project: two
