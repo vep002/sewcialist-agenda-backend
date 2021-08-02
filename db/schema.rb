@@ -10,20 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_22_210617) do
+ActiveRecord::Schema.define(version: 2021_07_31_201320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "materials", force: :cascade do |t|
+    t.string "description"
+    t.integer "price"
+    t.boolean "acquired"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_materials_on_project_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "mock_up"
-    t.string "finsihed"
+    t.string "finished"
     t.string "description"
-    t.boolean "in_progress"
-    t.boolean "completed"
-    t.boolean "private"
-    t.integer "start_date"
-    t.integer "end_date"
+    t.boolean "in_progress", default: true
+    t.boolean "completed", default: false
+    t.boolean "private", default: false
+    t.string "start_date"
+    t.string "end_date"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -32,10 +42,10 @@ ActiveRecord::Schema.define(version: 2021_07_22_210617) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "description"
-    t.boolean "in_progress"
-    t.boolean "completed"
-    t.integer "start_date"
-    t.integer "end_date"
+    t.boolean "in_progress", default: true
+    t.boolean "completed", default: false
+    t.string "start_date"
+    t.string "end_date"
     t.bigint "project_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -50,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_210617) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "materials", "projects"
   add_foreign_key "projects", "users"
   add_foreign_key "tasks", "projects"
 end
