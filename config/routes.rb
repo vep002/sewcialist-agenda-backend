@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   # LOGIN step 3b: a POST request to the /login resource routes to the login method in the users controller.
   post "/login", to: "users#login"
   get "/me", to: "users#me"
+
+  patch "/projects", to: "projects#update"
+  patch "/tasks", to: "tasks#update"
 end

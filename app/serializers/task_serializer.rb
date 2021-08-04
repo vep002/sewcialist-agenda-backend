@@ -1,4 +1,4 @@
 class TaskSerializer < ActiveModel::Serializer
-  attributes :id, :description, :in_progress, :completed, :start_date, :end_date
+  attributes :id, :description, :in_progress, :completed, :start_date, :end_date, :project_id
   
 end
