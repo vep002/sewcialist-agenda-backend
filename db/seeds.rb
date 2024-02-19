@@ -26,7 +26,7 @@ sequin_dress = Project.create(user_id: vee.id, mock_up: "https://res.cloudinary.
 
 puts "Creating completed projects"
 
-linen_romper = Project.create(user_id: vee.id, mock_up: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627310391/final%20project%20images/mockups/1355_sbytmq.jpg", finished: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627312669/final%20project%20images/finished/Screen_Shot_2021-07-26_at_10.16.13_AM_ng2rxm.png", description: "Linen jumpsuit. Nautical vibes. Linen fabric from Joann. Modified simplicity pattern 1355.", in_progress: false, completed: true, private: false, start_date: "2020-05-01", end_date: "2020-05/20")
+linen_romper = Project.create(user_id: vee.id, mock_up: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627310391/final%20project%20images/mockups/1355_sbytmq.jpg", finished: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627312193/final%20project%20images/finished/Untitled_design_2_zd9u8l.png", description: "Linen jumpsuit. Nautical vibes. Linen fabric from Joann. Modified simplicity pattern 1355.", in_progress: false, completed: true, private: false, start_date: "2020-05-01", end_date: "2020-05/20")
 green_dress = Project.create(user_id: vee.id, mock_up: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627310454/final%20project%20images/mockups/Stretch_sewing_book_54_f0zjuf.jpg", finished: "https://res.cloudinary.com/dz2jdgus7/image/upload/v1627312193/final%20project%20images/finished/Untitled_design_2_zd9u8l.png", description: "Christmas green velvet dress. Many compliments. Fabric from Joann. Pattern is Tilly and the Buttons Joni dress", in_progress: false, completed: true, private: false, start_date: "2019-12-01", end_date: "2019-12-15")
 
 puts "Creating future projects"
